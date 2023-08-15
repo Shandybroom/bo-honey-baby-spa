@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,13 +26,12 @@ Route::controller(LoginController::class)->group(function () {
     Route::get('/logout', 'logout')->name('logout');
 });
 
-// Route::controller(WargaController::class)->middleware(['auth'])->group(function () {
-//     Route::get('warga/index', 'index');
-//     Route::get('warga/{nik}/edit', 'edit');
-//     Route::get('warga/{nik}/show', 'show');
-//     Route::put('warga/update/{nik}', 'update');
-//     Route::get('warga/create', 'create');
-//     Route::post('warga/submit', 'store');
-//     Route::delete('warga/delete/{nik}', 'destroy');
-//     Route::get('warga/export/excel', 'export');
-// });
+Route::controller(MemberController::class)->middleware(['auth'])->group(function () {
+    Route::get('/member', 'index');
+    Route::get('member/{id}/edit', 'edit');
+    Route::get('member/{id}/show', 'show');
+    Route::put('member/update/{id}', 'update');
+    Route::get('member/create', 'create');
+    Route::post('member/submit', 'store');
+    Route::delete('member/delete/{id}', 'destroy');
+});

@@ -1,12 +1,10 @@
 @charset "UTF-8";
 
 :root {
-    --warna-background: #eff0f3;
-    --warna-utama: #ff8e3c;
-    --warna-utama-hover: #fcc095;
-    --warna-secondary: #d9376e;
+    --warna-utama: #FBA1B7;
+    --warna-utama-hover: #FFD1DA;
+    --warna-secondary: #FFDBAA;
     --text-button: #0d0d0d;
-    --warna-headline: #0d0d0d;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700,800");
@@ -751,7 +749,7 @@ select.form-control:not([size]):not([multiple]) {
 .card .card-header h4 {
   font-size: 16px;
   line-height: 28px;
-  color: #6777ef;
+  color: var(--warna-utama);
   padding-right: 10px;
   margin-bottom: 0;
 }
